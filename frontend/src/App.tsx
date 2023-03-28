@@ -12,7 +12,7 @@ function Welcome(){
     <h1>Here are some college basketball teams!!!</h1>
   );
 }
-
+// Create the teams class
 class Teams extends React.Component<{school: string; name: string; state: string; city: string;}>{
   render()
   {
@@ -20,13 +20,15 @@ class Teams extends React.Component<{school: string; name: string; state: string
 
     return(
       <div className="team-container">
-        <h1>{oneTeam.school}</h1>
+        {/* These are the the values that are passed from the JSON file */}
+        <h1>{oneTeam.school}</h1>   
         <h3>Lets Go {oneTeam.name}!!</h3>
         <h3>{oneTeam.city}, {oneTeam.state}</h3>
       </div>
     );
   }
 }
+
 
 function TeamInfo(){
   return(
@@ -36,7 +38,8 @@ function TeamInfo(){
   )
 }
 
-function App() {
+// this is that app that runs the classes
+function App() { 
   return (
     <div>
       <Welcome/>
